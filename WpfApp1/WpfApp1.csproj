@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12F6D567-E69D-488E-B26E-F181E76A262F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp1</RootNamespace>
+    <AssemblyName>WpfApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Json.Net, Version=1.0.23.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.Net.1.0.23\lib\netstandard2.0\Json.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageObjects\ContainerPageObject.cs" />
+    <Compile Include="PageObjects\Containers\ListBoxPO.cs" />
+    <Compile Include="PageObjects\Containers\TableBoxPO.cs" />
+    <Compile Include="PageObjects\Containers\TextAreaBoxPO.cs" />
+    <Compile Include="PageObjects\Containers\TreeViewBoxPO.cs" />
+    <Compile Include="PageObjects\NodeContainerPageObject.cs" />
+    <Compile Include="PageObjects\Containers\WindowContainerPageObject.cs" />
+    <Compile Include="PageObjects\Objects\TabBarPO.cs" />
+    <Compile Include="PageObjectTreeNode.cs" />
+    <Compile Include="TableData\TableData9.cs" />
+    <Compile Include="TableData\TableData8.cs" />
+    <Compile Include="TableData\TableData7.cs" />
+    <Compile Include="TableData\TableData6.cs" />
+    <Compile Include="TableData\TableData4.cs" />
+    <Compile Include="TableData\TableData5.cs" />
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataManager.cs" />
+    <Compile Include="PageObjectData.cs" />
+    <Compile Include="PageObjectEnum.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\PageObjectDescription.cs" />
+    <Compile Include="Model\PageObjectModel.cs" />
+    <Compile Include="PageObjects\Objects\ButtonPO.cs" />
+    <Compile Include="PageObjects\Containers\CheckboxBoxPO.cs" />
+    <Compile Include="PageObjects\Objects\CheckboxPO.cs" />
+    <Compile Include="PageObjects\Objects\ComboBoxPO.cs" />
+    <Compile Include="PageObjects\Containers\FormBoxPO.cs" />
+    <Compile Include="PageObjects\Containers\GroupBoxPO.cs" />
+    <Compile Include="PageObjects\Objects\LabelCheckboxPO.cs" />
+    <Compile Include="PageObjects\Objects\LabelComboBoxPO.cs" />
+    <Compile Include="PageObjects\Objects\LabelLineEditPO.cs" />
+    <Compile Include="PageObjects\Objects\LabelPO.cs" />
+    <Compile Include="PageObjects\Objects\LabelRadioButtonPO.cs" />
+    <Compile Include="PageObjects\Objects\LineEditPO.cs" />
+    <Compile Include="PageObjects\Objects\ListPO.cs" />
+    <Compile Include="PageObjects\Containers\RadioButtonBoxPO.cs" />
+    <Compile Include="PageObjects\Objects\RadioButtonPO.cs" />
+    <Compile Include="PageObjects\Objects\ReversedLabelCheckboxPO.cs" />
+    <Compile Include="PageObjects\Objects\ReversedLabelRadioButtonPO.cs" />
+    <Compile Include="PageObjects\Objects\TablePO.cs" />
+    <Compile Include="PageObjects\Objects\TextAreaPO.cs" />
+    <Compile Include="PageObjects\Objects\TreeViewPO.cs" />
+    <Compile Include="PageObjects\Objects\MenuItemPO.cs" />
+    <Compile Include="PageObjects\PageObject.cs" />
+    <Compile Include="PageObjects\Objects\StatusBarPO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Json\trees\tree0001.json" />
+    <None Include="Json\trees\tree0002.json" />
+    <None Include="Json\trees\tree0003.json" />
+    <None Include="Json\trees\tree0004.json" />
+    <None Include="Json\trees\tree0005.json" />
+    <None Include="Json\trees\tree0006.json" />
+    <None Include="Json\trees\tree0007.json" />
+    <None Include="Json\trees\tree0008.json" />
+    <None Include="Json\trees\tree0009.json" />
+    <None Include="Json\trees\tree0010.json" />
+    <None Include="Json\trees\tree0011.json" />
+    <None Include="Json\trees\tree0012.json" />
+    <None Include="Json\trees\tree0013.json" />
+    <None Include="Json\trees\tree0014.json" />
+    <None Include="Json\trees\tree0015.json" />
+    <None Include="Json\trees\tree0016.json" />
+    <None Include="Json\trees\tree0017.json" />
+    <None Include="Json\trees\tree0018.json" />
+    <None Include="Json\trees\tree0019.json" />
+    <None Include="Json\trees\tree0020.json" />
+    <None Include="Json\trees\tree0021.json" />
+    <None Include="Json\trees\tree0022.json" />
+    <None Include="Json\trees\tree0023.json" />
+    <None Include="Json\trees\tree0024.json" />
+    <None Include="Json\trees\tree0025.json" />
+    <None Include="Json\trees\tree0026.json" />
+    <None Include="Json\trees\tree0027.json" />
+    <None Include="Json\trees\tree0028.json" />
+    <None Include="Json\trees\tree0029.json" />
+    <None Include="Json\trees\tree0030.json" />
+    <None Include="Json\trees\tree0031.json" />
+    <None Include="Json\trees\tree0032.json" />
+    <None Include="Json\trees\tree0033.json" />
+    <None Include="Json\trees\tree0034.json" />
+    <None Include="Json\trees\tree0035.json" />
+    <None Include="Json\trees\tree0036.json" />
+    <None Include="Json\trees\tree0037.json" />
+    <None Include="Json\trees\tree0038.json" />
+    <None Include="Json\trees\tree0039.json" />
+    <None Include="Json\trees\tree0040.json" />
+    <None Include="Json\trees\tree0041.json" />
+    <None Include="Json\trees\tree0042.json" />
+    <None Include="Json\trees\tree0043.json" />
+    <None Include="Json\trees\tree0044.json" />
+    <None Include="Json\trees\tree0045.json" />
+    <None Include="Json\trees\tree0046.json" />
+    <None Include="Json\trees\tree0047.json" />
+    <None Include="Json\trees\tree0048.json" />
+    <None Include="Json\trees\tree0049.json" />
+    <None Include="Json\trees\tree0050.json" />
+    <None Include="Json\trees\tree0051.json" />
+    <None Include="Json\trees\tree0052.json" />
+    <None Include="Json\trees\tree0053.json" />
+    <None Include="Json\trees\tree0054.json" />
+    <None Include="Json\trees\tree0055.json" />
+    <None Include="Json\trees\tree0056.json" />
+    <None Include="Json\trees\tree0057.json" />
+    <None Include="Json\trees\tree0058.json" />
+    <None Include="Json\trees\tree0059.json" />
+    <None Include="Json\trees\tree0060.json" />
+    <None Include="Json\trees\tree0061.json" />
+    <None Include="Json\trees\tree0062.json" />
+    <None Include="Json\trees\tree0063.json" />
+    <None Include="Json\trees\tree0064.json" />
+    <None Include="Json\trees\tree0065.json" />
+    <None Include="Json\trees\tree0066.json" />
+    <None Include="Json\trees\tree0067.json" />
+    <None Include="Json\trees\tree0068.json" />
+    <None Include="Json\trees\tree0069.json" />
+    <None Include="Json\trees\tree0070.json" />
+    <None Include="Json\trees\tree0071.json" />
+    <None Include="Json\trees\tree0072.json" />
+    <None Include="Json\trees\tree0073.json" />
+    <None Include="Json\trees\tree0074.json" />
+    <None Include="Json\trees\tree0075.json" />
+    <None Include="Json\trees\tree0076.json" />
+    <None Include="Json\trees\tree0077.json" />
+    <None Include="Json\trees\tree0078.json" />
+    <None Include="Json\trees\tree0079.json" />
+    <None Include="Json\trees\tree0080.json" />
+    <None Include="Json\trees\tree0081.json" />
+    <None Include="Json\trees\tree0082.json" />
+    <None Include="Json\trees\tree0083.json" />
+    <None Include="Json\trees\tree0084.json" />
+    <None Include="Json\trees\tree0085.json" />
+    <None Include="Json\trees\tree0086.json" />
+    <None Include="Json\trees\tree0087.json" />
+    <None Include="Json\trees\tree0088.json" />
+    <None Include="Json\trees\tree0089.json" />
+    <None Include="Json\trees\tree0090.json" />
+    <None Include="Json\trees\tree0091.json" />
+    <None Include="Json\trees\tree0092.json" />
+    <None Include="Json\trees\tree0093.json" />
+    <None Include="Json\trees\tree0094.json" />
+    <None Include="Json\trees\tree0095.json" />
+    <None Include="Json\trees\tree0096.json" />
+    <None Include="Json\trees\tree0097.json" />
+    <None Include="Json\trees\tree0098.json" />
+    <None Include="Json\trees\tree0099.json" />
+    <None Include="Json\trees\tree0100.json" />
+    <None Include="Json\trees\tree1.json" />
+    <None Include="Json\trees\tree10.json" />
+    <None Include="Json\trees\tree100.json" />
+    <None Include="Json\trees\tree11.json" />
+    <None Include="Json\trees\tree12.json" />
+    <None Include="Json\trees\tree13.json" />
+    <None Include="Json\trees\tree14.json" />
+    <None Include="Json\trees\tree15.json" />
+    <None Include="Json\trees\tree16.json" />
+    <None Include="Json\trees\tree17.json" />
+    <None Include="Json\trees\tree18.json" />
+    <None Include="Json\trees\tree19.json" />
+    <None Include="Json\trees\tree2.json" />
+    <None Include="Json\trees\tree20.json" />
+    <None Include="Json\trees\tree21.json" />
+    <None Include="Json\trees\tree22.json" />
+    <None Include="Json\trees\tree23.json" />
+    <None Include="Json\trees\tree24.json" />
+    <None Include="Json\trees\tree25.json" />
+    <None Include="Json\trees\tree26.json" />
+    <None Include="Json\trees\tree27.json" />
+    <None Include="Json\trees\tree28.json" />
+    <None Include="Json\trees\tree29.json" />
+    <None Include="Json\trees\tree3.json" />
+    <None Include="Json\trees\tree30.json" />
+    <None Include="Json\trees\tree31.json" />
+    <None Include="Json\trees\tree32.json" />
+    <None Include="Json\trees\tree33.json" />
+    <None Include="Json\trees\tree34.json" />
+    <None Include="Json\trees\tree35.json" />
+    <None Include="Json\trees\tree36.json" />
+    <None Include="Json\trees\tree37.json" />
+    <None Include="Json\trees\tree38.json" />
+    <None Include="Json\trees\tree39.json" />
+    <None Include="Json\trees\tree4.json" />
+    <None Include="Json\trees\tree40.json" />
+    <None Include="Json\trees\tree41.json" />
+    <None Include="Json\trees\tree42.json" />
+    <None Include="Json\trees\tree43.json" />
+    <None Include="Json\trees\tree44.json" />
+    <None Include="Json\trees\tree45.json" />
+    <None Include="Json\trees\tree46.json" />
+    <None Include="Json\trees\tree47.json" />
+    <None Include="Json\trees\tree48.json" />
+    <None Include="Json\trees\tree49.json" />
+    <None Include="Json\trees\tree5.json" />
+    <None Include="Json\trees\tree50.json" />
+    <None Include="Json\trees\tree51.json" />
+    <None Include="Json\trees\tree52.json" />
+    <None Include="Json\trees\tree53.json" />
+    <None Include="Json\trees\tree54.json" />
+    <None Include="Json\trees\tree55.json" />
+    <None Include="Json\trees\tree56.json" />
+    <None Include="Json\trees\tree57.json" />
+    <None Include="Json\trees\tree58.json" />
+    <None Include="Json\trees\tree59.json" />
+    <None Include="Json\trees\tree6.json" />
+    <None Include="Json\trees\tree60.json" />
+    <None Include="Json\trees\tree61.json" />
+    <None Include="Json\trees\tree62.json" />
+    <None Include="Json\trees\tree63.json" />
+    <None Include="Json\trees\tree64.json" />
+    <None Include="Json\trees\tree65.json" />
+    <None Include="Json\trees\tree66.json" />
+    <None Include="Json\trees\tree67.json" />
+    <None Include="Json\trees\tree68.json" />
+    <None Include="Json\trees\tree69.json" />
+    <None Include="Json\trees\tree7.json" />
+    <None Include="Json\trees\tree70.json" />
+    <None Include="Json\trees\tree71.json" />
+    <None Include="Json\trees\tree72.json" />
+    <None Include="Json\trees\tree73.json" />
+    <None Include="Json\trees\tree74.json" />
+    <None Include="Json\trees\tree75.json" />
+    <None Include="Json\trees\tree76.json" />
+    <None Include="Json\trees\tree77.json" />
+    <None Include="Json\trees\tree78.json" />
+    <None Include="Json\trees\tree79.json" />
+    <None Include="Json\trees\tree8.json" />
+    <None Include="Json\trees\tree80.json" />
+    <None Include="Json\trees\tree81.json" />
+    <None Include="Json\trees\tree82.json" />
+    <None Include="Json\trees\tree83.json" />
+    <None Include="Json\trees\tree84.json" />
+    <None Include="Json\trees\tree85.json" />
+    <None Include="Json\trees\tree86.json" />
+    <None Include="Json\trees\tree87.json" />
+    <None Include="Json\trees\tree88.json" />
+    <None Include="Json\trees\tree89.json" />
+    <None Include="Json\trees\tree9.json" />
+    <None Include="Json\trees\tree90.json" />
+    <None Include="Json\trees\tree91.json" />
+    <None Include="Json\trees\tree92.json" />
+    <None Include="Json\trees\tree93.json" />
+    <None Include="Json\trees\tree94.json" />
+    <None Include="Json\trees\tree95.json" />
+    <None Include="Json\trees\tree96.json" />
+    <None Include="Json\trees\tree97.json" />
+    <None Include="Json\trees\tree98.json" />
+    <None Include="Json\trees\tree99.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Json\widgets_description.json" />
+    <None Include="Json\widget_tree.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Calculations\" />
+    <Folder Include="Photos\" />
+    <Folder Include="Styles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties json_4trees_4tree2_1json__JsonSchema="https://bitbucket.org/atlassianlabs/atlascode/raw/main/resources/schemas/pipelines-schema.json" json_4trees_4tree0001_1json__JsonSchema="https://json-stat.org/format/schema/2.0/" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
